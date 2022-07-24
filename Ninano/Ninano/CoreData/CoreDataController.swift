@@ -41,7 +41,6 @@ struct CoreDataController {
         eventItem?.setValue(dateReservedCD, forKey: "dateReservedCD")
         
         save()
-        
     }
     
     // TODO: NSPredicate 에서 filter 의 기능으로(?) name 만 받았다. 문제가 생기면 더 늘려보는 걸로 하자.

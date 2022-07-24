@@ -24,6 +24,7 @@
 		58D6ECB6288D654F00AB402F /* SubscriptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6ECB5288D654F00AB402F /* SubscriptModel.swift */; };
 		58D6ECB8288D6B2C00AB402F /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6ECB7288D6B2C00AB402F /* CoreDataController.swift */; };
 		58D6ECBA288D88AA00AB402F /* KeywordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6ECB9288D88AA00AB402F /* KeywordModel.swift */; };
+		58D6ECBC288D8A7F00AB402F /* KeywordCoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6ECBB288D8A7F00AB402F /* KeywordCoreDataController.swift */; };
 		9047C99B288149D800CD8113 /* NoticeGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047C99A288149D800CD8113 /* NoticeGridCollectionViewCell.swift */; };
 		CC21943528824FB300E93AC7 /* PerformancesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC21943428824FB300E93AC7 /* PerformancesViewCell.swift */; };
 		CC21943C28844F9500E93AC7 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC21943B28844F9500E93AC7 /* UIColor+Extension.swift */; };
@@ -72,6 +73,7 @@
 		58D6ECB5288D654F00AB402F /* SubscriptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptModel.swift; sourceTree = "<group>"; };
 		58D6ECB7288D6B2C00AB402F /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		58D6ECB9288D88AA00AB402F /* KeywordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordModel.swift; sourceTree = "<group>"; };
+		58D6ECBB288D8A7F00AB402F /* KeywordCoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCoreDataController.swift; sourceTree = "<group>"; };
 		9047C99A288149D800CD8113 /* NoticeGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeGridCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC21943428824FB300E93AC7 /* PerformancesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformancesViewCell.swift; sourceTree = "<group>"; };
 		CC21943B28844F9500E93AC7 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				58D6ECB2288D64C000AB402F /* NinanoCoreData.xcdatamodeld */,
 				58D6ECB7288D6B2C00AB402F /* CoreDataController.swift */,
+				58D6ECBB288D8A7F00AB402F /* KeywordCoreDataController.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				587D49C42880778100727BD6 /* KeywordTableViewCell.swift in Sources */,
 				CC8B50CA287C1063004EE6DB /* SceneDelegate.swift in Sources */,
 				32CF35DA28830E9A00665186 /* CategoryCell.swift in Sources */,
+				58D6ECBC288D8A7F00AB402F /* KeywordCoreDataController.swift in Sources */,
 				32CF35DC28830EAB00665186 /* EventCell.swift in Sources */,
 				58A1AA38287FDEDB001BCFA9 /* NoticeViewController.swift in Sources */,
 			);
