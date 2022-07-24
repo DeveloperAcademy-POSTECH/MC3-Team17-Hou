@@ -12,7 +12,7 @@ struct KeywordCoreDataController {
     static let shared = KeywordCoreDataController()
     
     private let persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "KeywordSubs")
+        let container = NSPersistentContainer(name: "NinanoCoreData")
         container.loadPersistentStores { description, error in
             if let error = error {
                 fatalError("Error: Unable to load the persistent stores. -> \(error.localizedDescription)")

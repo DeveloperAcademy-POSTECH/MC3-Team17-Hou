@@ -14,8 +14,8 @@ struct SubscriptModel {
         return CoreDataController.shared.eventItemsList
     }
     
-    func addEventItems(nameCD: String, isLikedCD: Bool, isReservedCD: Bool, dateReservedCD: Date?) {
-        CoreDataController.shared.addEventItems(nameCD: nameCD, isLikedCD: isLikedCD, isReservedCD: isReservedCD, dateReservedCD: dateReservedCD)
+    func addEventItems(nameCD: String, isLikedCD: Bool) {
+        CoreDataController.shared.addEventItems(nameCD: nameCD, isLikedCD: isLikedCD)
     }
     
     func removeEventItem(nameCD: String?) {
@@ -23,5 +23,4 @@ struct SubscriptModel {
         
         CoreDataController.shared.removeEventItem(nameCD: nameCD)
     }
-    
 }
