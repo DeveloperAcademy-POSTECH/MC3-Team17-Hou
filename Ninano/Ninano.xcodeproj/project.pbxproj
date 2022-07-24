@@ -20,6 +20,10 @@
 		58A1AA38287FDEDB001BCFA9 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1AA37287FDEDB001BCFA9 /* NoticeViewController.swift */; };
 		58A1AA3A287FF390001BCFA9 /* KeywordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1AA39287FF390001BCFA9 /* KeywordViewController.swift */; };
 		58A1AA3C287FF445001BCFA9 /* InterestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1AA3B287FF445001BCFA9 /* InterestListViewController.swift */; };
+		58D6ECB4288D64C000AB402F /* NinanoCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 58D6ECB2288D64C000AB402F /* NinanoCoreData.xcdatamodeld */; };
+		58D6ECB6288D654F00AB402F /* SubscriptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6ECB5288D654F00AB402F /* SubscriptModel.swift */; };
+		58D6ECB8288D6B2C00AB402F /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6ECB7288D6B2C00AB402F /* CoreDataController.swift */; };
+		58D6ECBA288D88AA00AB402F /* KeywordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6ECB9288D88AA00AB402F /* KeywordModel.swift */; };
 		9047C99B288149D800CD8113 /* NoticeGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047C99A288149D800CD8113 /* NoticeGridCollectionViewCell.swift */; };
 		CC21943528824FB300E93AC7 /* PerformancesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC21943428824FB300E93AC7 /* PerformancesViewCell.swift */; };
 		CC21943C28844F9500E93AC7 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC21943B28844F9500E93AC7 /* UIColor+Extension.swift */; };
@@ -64,6 +68,10 @@
 		58A1AA37287FDEDB001BCFA9 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		58A1AA39287FF390001BCFA9 /* KeywordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordViewController.swift; sourceTree = "<group>"; };
 		58A1AA3B287FF445001BCFA9 /* InterestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestListViewController.swift; sourceTree = "<group>"; };
+		58D6ECB3288D64C000AB402F /* NinanoCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NinanoCoreData.xcdatamodel; sourceTree = "<group>"; };
+		58D6ECB5288D654F00AB402F /* SubscriptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptModel.swift; sourceTree = "<group>"; };
+		58D6ECB7288D6B2C00AB402F /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		58D6ECB9288D88AA00AB402F /* KeywordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordModel.swift; sourceTree = "<group>"; };
 		9047C99A288149D800CD8113 /* NoticeGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeGridCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC21943428824FB300E93AC7 /* PerformancesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformancesViewCell.swift; sourceTree = "<group>"; };
 		CC21943B28844F9500E93AC7 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -108,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58D6ECB1288D64A900AB402F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				58D6ECB2288D64C000AB402F /* NinanoCoreData.xcdatamodeld */,
+				58D6ECB7288D6B2C00AB402F /* CoreDataController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		92AFEC367EA6A85B89A8DB34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +163,7 @@
 		CC8B50C6287C1063004EE6DB /* Ninano */ = {
 			isa = PBXGroup;
 			children = (
+				58D6ECB1288D64A900AB402F /* CoreData */,
 				F6AC89B52888356E006B3275 /* Model */,
 				F6AC89A72887F638006B3275 /* Storyboard */,
 				F6B158FD2887AECE000B4F51 /* Controllers */,
@@ -214,6 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				F6AC89AB28883550006B3275 /* EventModel.swift */,
+				58D6ECB5288D654F00AB402F /* SubscriptModel.swift */,
+				58D6ECB9288D88AA00AB402F /* KeywordModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -411,14 +431,17 @@
 				CC7EAA44288982240057E9C2 /* Label+padding.swift in Sources */,
 				F6AC89BD28886835006B3275 /* NavigationItem+Extension.swift in Sources */,
 				F6AC89B328883550006B3275 /* WeeklyCalendarCell.swift in Sources */,
+				58D6ECBA288D88AA00AB402F /* KeywordModel.swift in Sources */,
 				4DFDB17D2885842E00C56411 /* DetailLinkViewController.swift in Sources */,
 				4D9F018828862FE100300DB8 /* SetKeywordViewController.swift in Sources */,
 				3262DC252882DA8C007C6103 /* SearchViewController.swift in Sources */,
 				F63AEBDB2886788800D57A4F /* CalendarCollectionViewCell.swift in Sources */,
+				58D6ECB4288D64C000AB402F /* NinanoCoreData.xcdatamodeld in Sources */,
 				F63AEBA82884285700D57A4F /* CalendarViewController.swift in Sources */,
 				581AE5652885099D00853BEB /* LineSegmentedControl.swift in Sources */,
 				F6AC89B128883550006B3275 /* DayEventDetailCell.swift in Sources */,
 				58A1AA3A287FF390001BCFA9 /* KeywordViewController.swift in Sources */,
+				58D6ECB8288D6B2C00AB402F /* CoreDataController.swift in Sources */,
 				CC8B50CC287C1063004EE6DB /* EventDetailViewController.swift in Sources */,
 				CC21943528824FB300E93AC7 /* PerformancesViewCell.swift in Sources */,
 				CC21943C28844F9500E93AC7 /* UIColor+Extension.swift in Sources */,
@@ -428,6 +451,7 @@
 				58A1AA3C287FF445001BCFA9 /* InterestListViewController.swift in Sources */,
 				F6AC89B228883550006B3275 /* CalendarDetailViewController.swift in Sources */,
 				CC8B50D2287C1063004EE6DB /* Ninano.xcdatamodeld in Sources */,
+				58D6ECB6288D654F00AB402F /* SubscriptModel.swift in Sources */,
 				F6AC89B028883550006B3275 /* EventModel.swift in Sources */,
 				4D51F2322885B72100CB8FD0 /* ModalCalendarViewController.swift in Sources */,
 				9047C99B288149D800CD8113 /* NoticeGridCollectionViewCell.swift in Sources */,
@@ -666,6 +690,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		58D6ECB2288D64C000AB402F /* NinanoCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				58D6ECB3288D64C000AB402F /* NinanoCoreData.xcdatamodel */,
+			);
+			currentVersion = 58D6ECB3288D64C000AB402F /* NinanoCoreData.xcdatamodel */;
+			path = NinanoCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		CC8B50D0287C1063004EE6DB /* Ninano.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
