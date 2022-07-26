@@ -11,7 +11,7 @@ final class APICaller {
     static let shared = APICaller()
 
     struct Constants {
-        static let topHeadlinesURL = URL(string: "http://openapi.seoul.go.kr:8088/51476b414763686534346b53557a4a/json/culturalEventInfo/1/1/%EA%B5%AD%EC%95%85")
+        static let topHeadlinesURL = URL(string: "http://openapi.seoul.go.kr:8088/51476b414763686534346b53557a4a/json/culturalEventInfo/1/5/%EA%B5%AD%EC%95%85")
     }
 
     private init() {}

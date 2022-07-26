@@ -46,7 +46,6 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="153" id="Tga-ji-bfS"/>
-                                                        <constraint firstAttribute="width" constant="386" id="bTf-d5-Rfp"/>
                                                     </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="14" minimumInteritemSpacing="0.0" id="nEH-9c-OLr">
                                                         <size key="itemSize" width="104" height="139"/>
