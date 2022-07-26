@@ -14,6 +14,6 @@ class SetKeywordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addKeywordBtn.layer.cornerRadius = 20
+        addKeywordBtn.layer.cornerRadius = 5
     }
 }
