@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 // MARK: - APIResponse
 struct APIResponse: Codable {
     let culturalEventInfo: CulturalEventInfo

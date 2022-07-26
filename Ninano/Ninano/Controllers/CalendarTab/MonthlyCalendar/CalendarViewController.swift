@@ -44,7 +44,6 @@ class CalendarViewController: UIViewController {
         self.calculation()
         self.calendarView?.reloadData()
         
-        
     }
     
     @IBAction func didTappedFrontButton(_ sender: Any) {
@@ -86,7 +85,6 @@ class CalendarViewController: UIViewController {
         }
     }
     
-   
     @objc
     func handleTapPressGesture() {
         print("달력")

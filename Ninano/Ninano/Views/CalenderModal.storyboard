@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iVM-9m-UJx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calender Modal View Controller-->
+        <scene sceneID="6TU-AC-vx9">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZ5-B6-ywO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="CalenderModalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iVM-9m-UJx" customClass="CalenderModalViewController" customModule="Ninano" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C1m-kX-CcO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wE2-uG-72g">
+                                <rect key="frame" x="0.0" y="60" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="내 일정에 저장" id="csx-r6-Jgf">
+                                        <barButtonItem key="leftBarButtonItem" title="취소" id="8EC-kC-x7s">
+                                            <connections>
+                                                <action selector="cancelButton:" destination="iVM-9m-UJx" id="R9E-hB-ey0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nho-x9-sa2">
+                                <rect key="frame" x="0.0" y="130" width="414" height="479"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZ4-g8-8pA">
+                                        <rect key="frame" x="10" y="0.0" width="394" height="408"/>
+                                        <subviews>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="cQz-ch-37L">
+                                                <rect key="frame" x="5" y="5" width="384" height="398"/>
+                                            </datePicker>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="cQz-ch-37L" firstAttribute="top" secondItem="pZ4-g8-8pA" secondAttribute="top" constant="5" id="AdI-VL-5ac"/>
+                                            <constraint firstItem="cQz-ch-37L" firstAttribute="leading" secondItem="pZ4-g8-8pA" secondAttribute="leading" constant="5" id="MBf-tq-Gga"/>
+                                            <constraint firstAttribute="bottom" secondItem="cQz-ch-37L" secondAttribute="bottom" constant="5" id="Mhb-5V-tqh"/>
+                                            <constraint firstAttribute="trailing" secondItem="cQz-ch-37L" secondAttribute="trailing" constant="5" id="nDt-xN-ztB"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXT-Xe-qLR">
+                                        <rect key="frame" x="10" y="423" width="394" height="56"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="ss2-NK-poj"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="일정 추가">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clickedScheduleButton:" destination="iVM-9m-UJx" eventType="touchUpInside" id="aeQ-av-15Q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pZ4-g8-8pA" secondAttribute="trailing" constant="10" id="0dv-Hv-zpo"/>
+                                    <constraint firstItem="VXT-Xe-qLR" firstAttribute="leading" secondItem="nho-x9-sa2" secondAttribute="leading" constant="10" id="1FX-MQ-qfL"/>
+                                    <constraint firstItem="pZ4-g8-8pA" firstAttribute="leading" secondItem="nho-x9-sa2" secondAttribute="leading" constant="10" id="EQq-xA-93r"/>
+                                    <constraint firstAttribute="trailing" secondItem="VXT-Xe-qLR" secondAttribute="trailing" constant="10" id="Kdh-OE-Eda"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XZg-YL-m1Z"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wE2-uG-72g" firstAttribute="top" secondItem="XZg-YL-m1Z" secondAttribute="top" constant="16" id="4pa-uw-cLC"/>
+                            <constraint firstItem="nho-x9-sa2" firstAttribute="leading" secondItem="XZg-YL-m1Z" secondAttribute="leading" id="Cwd-3n-u3Y"/>
+                            <constraint firstItem="XZg-YL-m1Z" firstAttribute="trailing" secondItem="nho-x9-sa2" secondAttribute="trailing" id="fYz-JH-djJ"/>
+                            <constraint firstItem="nho-x9-sa2" firstAttribute="trailing" secondItem="wE2-uG-72g" secondAttribute="trailing" id="h4S-EW-AnJ"/>
+                            <constraint firstItem="nho-x9-sa2" firstAttribute="top" secondItem="wE2-uG-72g" secondAttribute="bottom" constant="26" id="lrh-4D-YCt"/>
+                            <constraint firstItem="nho-x9-sa2" firstAttribute="leading" secondItem="wE2-uG-72g" secondAttribute="leading" id="sp3-h0-xoE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calendarFrame" destination="pZ4-g8-8pA" id="2k5-Me-rbJ"/>
+                        <outlet property="dataPicker" destination="cQz-ch-37L" id="qWd-Po-D2e"/>
+                        <outlet property="scheduleButton" destination="VXT-Xe-qLR" id="2RQ-6l-zSc"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="971.01449275362324" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

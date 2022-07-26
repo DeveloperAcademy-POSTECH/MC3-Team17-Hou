@@ -7,49 +7,25 @@
 
 import UIKit
 
-protocol DateDelivable: AnyObject {
-    func addDate(date: String)
-}
-
-final class SearchResultViewController: UIViewController, DateDelivable {
+final class SearchResultViewController: UIViewController {
     
+    @IBOutlet weak var eventFilterButton: EventFilterButton!
     @IBOutlet private var performanceCollectionView: UICollectionView!
     @IBOutlet private weak var keywordNotification: UIButton!
-    @IBOutlet private weak var dateFilterButton: UIButton!
     @IBOutlet private weak var keywordAddedNotification: UIStackView!
     @IBOutlet private weak var eventCollectionView: UICollectionView!
     private var isNotificationButtonSelected = false
-    private var filters: [Filter] = []
-    private var selectedLocal: LocationType? {
-        didSet {
-            // TODO: 밑에 공연 filtering
-            print("local inited: \(selectedLocal?.rawValue ?? "")")
-        }
-    }
+    
     fileprivate let systemImagesTemp = ["performanceImage1", "performanceImage2", "performanceImage1", "performanceImage2", "performanceImage1", "performanceImage2", "performanceImage1", "performanceImage2", "performanceImage1", "performanceImage2", "performanceImage1", "performanceImage2", "performanceImage1", "performanceImage2", "performanceImage1", "performanceImage2"]
     
-    private enum Filter {
-        case local
-        case category
-        case date
-    }
-    
-    private enum LocationType: String {
-        case gangnam = "강남"
-        case gangbook = "강북"
-        case gurogu = "구로구"
-        case gwanakgu = "관악구"
-        case gwangjingu = "광진구"
-        case dobonggu = "도봉구"
-        case nowongu = "노원구"
-    }
-    
     override func viewDidLoad() {
+        super.viewDidLoad()
         keywordAddedNotification.isHidden = true
         // collectionView에 대한 설정
         performanceCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         performanceCollectionView.dataSource = self
         performanceCollectionView.delegate = self
+        eventFilterButton.datedeliveryDelegate = self
         
         let uiImage = UIImage(systemName: "chevron.left")
         let undo = UIBarButtonItem(image: uiImage, style: .plain, target: self, action: #selector(didTapBackButton))
@@ -65,44 +41,9 @@ final class SearchResultViewController: UIViewController, DateDelivable {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @objc private func presentModalController() {
-        let controller = CalenderSearchResultViewController()
-        present(controller, animated: true, completion: nil)
-    }
-    
-    private func clickedFilterButtonColorChange(_ sender: UIButton) {
-        let button = sender
-            button.configuration?.baseBackgroundColor = UIColor(hex: "D5DCF8")
-            button.configuration?.cornerStyle = .capsule
-    }
-    
-    func addDate(date: String) {
-        dateFilterButton.setTitle(date, for: .normal)
-        clickedFilterButtonColorChange(dateFilterButton)
-    }
-    
     @IBAction private func keywordNotificationButton(_ sender: UIButton) {
     }
     
-    @IBAction private func localFilterButton(_ sender: UIButton) {
-        let actionSheet = UIAlertController(title: "지역 선택", message: "공연 정보를 나타낼 지역을 설정해주세요.", preferredStyle: .actionSheet)
-        let locals: [LocationType] = [.gangnam, .gangbook, .gurogu, .gwanakgu, .gwangjingu, .dobonggu, .nowongu]
-        for local in locals {
-            let location = local.rawValue
-            actionSheet.addAction(UIAlertAction(title: location, style: .default, handler: { [self] _ in
-                clickedFilterButtonColorChange(sender)
-                sender.titleLabel?.text = location
-            }))
-        }
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        self.present(actionSheet, animated: true, completion: nil)
-    }
-    
-    @IBAction private func dateFilterButton(_ sender: UIButton) {
-        guard let calenderSearchResult = self.storyboard?.instantiateViewController(withIdentifier: "CalenderSearchResultViewController") as? CalenderSearchResultViewController else { return }
-                self.present(calenderSearchResult, animated: true, completion: nil)
-        calenderSearchResult.datedeliveryDelegate = self
-    }
     @IBAction private func notificationSettingsButton(_ sender: UIButton) {
         // TODO: 키워드 값 넣는 로직
         if isNotificationButtonSelected == false {
@@ -148,5 +89,35 @@ extension SearchResultViewController: UICollectionViewDataSource, UICollectionVi
         }
         
         return PerformancesViewCell()
+    }
+}
+
+protocol DateDelivable: AnyObject {
+    func addDate(date: Date)
+}
+
+protocol FilterButtonClickable: AnyObject {
+    func openLocalActionSheet(actionSheet: UIAlertController)
+    func openCaledarSearchResultView()
+}
+
+extension SearchResultViewController: DateDelivable, FilterButtonClickable {
+    
+    func addDate(date: Date) {
+        let koreanDate = date.convertDateToKoreanDate(.koreanDate)
+        let button: UIButton = eventFilterButton.dateFilterButton
+        button.setTitle(koreanDate, for: .normal)
+        button.configuration?.baseBackgroundColor = UIColor(hex: "D5DCF8")
+        button.configuration?.cornerStyle = .capsule
+    }
+    
+    func openLocalActionSheet(actionSheet: UIAlertController) {
+        self.present(actionSheet, animated: true, completion: nil)
+    }
+    
+    func openCaledarSearchResultView() {
+        guard let calenderModal = UIStoryboard(name: "CalenderModal", bundle: .main).instantiateViewController(withIdentifier: "CalenderModalViewController") as? CalenderModalViewController else { return }
+        calenderModal.datedeliveryDelegate = self
+        self.present(calenderModal, animated: true, completion: nil)
     }
 }

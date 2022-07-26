@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CalenderSearchResultViewController: UIViewController {
+final class CalenderModalViewController: UIViewController {
     
     @IBOutlet weak private var scheduleButton: UIButton!
     @IBOutlet weak private var calendarFrame: UIView!
@@ -23,8 +23,7 @@ final class CalenderSearchResultViewController: UIViewController {
     
     @IBAction private func clickedScheduleButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
-        let koreanDate = dataPicker.date.convertDateToKoreanDate(.koreanDate)
-        datedeliveryDelegate?.addDate(date: koreanDate)
+        datedeliveryDelegate?.addDate(date: dataPicker.date)
     }
     
     @IBAction private func cancelButton(_ sender: UIBarButtonItem) {

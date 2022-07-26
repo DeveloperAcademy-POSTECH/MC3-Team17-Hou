@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventFilterButton" customModule="Ninano" customModuleProvider="target">
+            <connections>
+                <outlet property="dateFilterButton" destination="p5f-K0-wMr" id="NsR-B8-gZp"/>
+                <outlet property="localFilterButton" destination="1ff-yL-qJn" id="pz9-E3-hGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="213" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="7Dh-m2-hwN">
+                    <rect key="frame" x="0.0" y="0.0" width="213" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ff-yL-qJn">
+                            <rect key="frame" x="0.0" y="0.0" width="96.5" height="30"/>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" title="지역설정" cornerStyle="capsule">
+                                <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="localFilterButton:" destination="-1" eventType="touchUpInside" id="5wJ-aU-nhI"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5f-K0-wMr">
+                            <rect key="frame" x="110.5" y="0.0" width="102.5" height="30"/>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" cornerStyle="capsule">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="일정설정">
+                                        <attributes>
+                                            <font key="NSFont" size="13" name="AppleSDGothicNeo-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="dateFilterButton:" destination="-1" eventType="touchUpInside" id="pOL-aO-Oed"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="7Dh-m2-hwN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QhX-X2-Wfc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7Dh-m2-hwN" secondAttribute="bottom" id="Wwx-7h-rBJ"/>
+                <constraint firstItem="7Dh-m2-hwN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Yjf-kd-yZj"/>
+                <constraint firstAttribute="trailing" secondItem="7Dh-m2-hwN" secondAttribute="trailing" id="iBM-kh-L9O"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-42.753623188405797" y="-167.41071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

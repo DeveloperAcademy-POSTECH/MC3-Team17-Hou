@@ -18,42 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ni1-ll-Hun">
-                                <rect key="frame" x="30" y="64" width="152" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2N-Pl-Ng1">
-                                        <rect key="frame" x="0.0" y="0.0" width="69" height="30"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="지역설정" cornerStyle="capsule">
-                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
-                                            <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="localButton:" destination="1Rx-NM-lgc" eventType="touchUpInside" id="wXU-JL-qpB"/>
-                                            <action selector="localFilterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="AfS-bI-Y48"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJM-yL-8aV">
-                                        <rect key="frame" x="83" y="0.0" width="69" height="30"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" cornerStyle="capsule">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="일정설정">
-                                                    <attributes>
-                                                        <font key="NSFont" size="13" name="AppleSDGothicNeo-Regular"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="dateFilterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rfB-Gp-gtV"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WdU-wj-TDT">
                                 <rect key="frame" x="0.0" y="104" width="414" height="1"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
@@ -170,42 +134,49 @@
                                     <constraint firstAttribute="height" constant="40" id="PfV-hb-vVa"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-Rg-zDe" customClass="EventFilterButton" customModule="Ninano" customModuleProvider="target">
+                                <rect key="frame" x="30" y="64" width="189" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2K9-18-f65"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="udG-aU-qED" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="18p-a8-Ytk"/>
                             <constraint firstItem="Wdi-el-Pla" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="AeU-No-Uga"/>
+                            <constraint firstItem="9aE-Rg-zDe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="C3y-s2-9mY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Wdi-el-Pla" secondAttribute="bottom" constant="14" id="FTW-8Z-mzB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="udG-aU-qED" secondAttribute="bottom" id="KBL-em-rA3"/>
+                            <constraint firstItem="WdU-wj-TDT" firstAttribute="top" secondItem="9aE-Rg-zDe" secondAttribute="bottom" constant="10" id="OD1-v1-7Ze"/>
                             <constraint firstItem="ClT-jf-Z8m" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="PdA-oV-d2P"/>
-                            <constraint firstItem="WdU-wj-TDT" firstAttribute="top" secondItem="ni1-ll-Hun" secondAttribute="bottom" constant="10" id="S7O-rc-QfW"/>
-                            <constraint firstItem="ni1-ll-Hun" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Tzy-1g-0QT"/>
                             <constraint firstItem="WdU-wj-TDT" firstAttribute="centerX" secondItem="udG-aU-qED" secondAttribute="centerX" id="W9n-Pd-O5r"/>
                             <constraint firstItem="udG-aU-qED" firstAttribute="top" secondItem="WdU-wj-TDT" secondAttribute="bottom" constant="5" id="Wd4-5E-jhn"/>
                             <constraint firstItem="WdU-wj-TDT" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="-20" id="bnu-Ce-XsS"/>
-                            <constraint firstItem="ni1-ll-Hun" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="fde-Ur-JeX"/>
+                            <constraint firstItem="9aE-Rg-zDe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="tFs-aK-tOL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ClT-jf-Z8m" secondAttribute="bottom" constant="14" id="tOU-2d-59q"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="udG-aU-qED" secondAttribute="trailing" constant="10" id="uUx-sS-Yn9"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dateFilterButton" destination="oJM-yL-8aV" id="GtA-Gz-2gC"/>
                         <outlet property="eventCollectionView" destination="udG-aU-qED" id="nDN-dQ-ZHd"/>
+                        <outlet property="eventFilterButton" destination="9aE-Rg-zDe" id="w1z-BS-og1"/>
                         <outlet property="keywordAddedNotification" destination="Wdi-el-Pla" id="jBW-Sa-OSz"/>
                         <outlet property="keywordNotification" destination="ClT-jf-Z8m" id="0P2-rv-v0a"/>
                         <outlet property="performanceCollectionView" destination="udG-aU-qED" id="aT0-Vv-n4Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="1Rx-NM-lgc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="60.869565217391312" y="95.758928571428569"/>
         </scene>
-        <!--Calender Search Result View Controller-->
+        <!--Calender Modal View Controller-->
         <scene sceneID="kWQ-kW-4hC">
             <objects>
-                <viewController storyboardIdentifier="CalenderSearchResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z1P-50-fTS" customClass="CalenderSearchResultViewController" customModule="Ninano" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJq-mw-qwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="f" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z1P-50-fTS" customClass="CalenderModalViewController" customModule="Ninano" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DB4-GS-nn0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,22 +252,13 @@
                         <outlet property="scheduleButton" destination="l2B-lk-xju" id="89w-5z-RLN"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tJq-mw-qwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="971.01449275362324" y="95.758928571428569"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="mJz-w0-JyG">
-            <size key="intrinsicContentSize" width="157.5" height="16"/>
-        </designable>
-    </designables>
     <resources>
         <image name="bell.circle.fill" catalog="system" width="128" height="121"/>
         <image name="heart.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
