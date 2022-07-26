@@ -18,20 +18,19 @@ final class PerformancesViewCell: UICollectionViewCell {
             self.performanceImage.image = UIImage(named: imageName)
         }
     }
-    private var isHeartedSelected = false
-    
-    @IBAction func clickedHeart(_ sender: UIButton) {
-        if isHeartedSelected {
-            let config = UIImage.SymbolConfiguration(paletteColors: [.systemGray5, .systemGray, .darkGray])
-            let image = UIImage(systemName: "heart.circle.fill", withConfiguration: config)
-            sender.setImage(image, for: .normal)
-            isHeartedSelected = false
-        } else {
-            let config = UIImage.SymbolConfiguration(paletteColors: [.red, .systemGray, .darkGray])
-            let image = UIImage(systemName: "heart.circle.fill", withConfiguration: config)
-            sender.setImage(image, for: .normal)
-            isHeartedSelected = true
-        }
-    }
+//    private var isHeartedSelected = false
+//    @IBAction func clickedHeart(_ sender: UIButton) {
+//        if isHeartedSelected {
+//            let config = UIImage.SymbolConfiguration(paletteColors: [.systemGray5, .systemGray, .darkGray])
+//            let image = UIImage(systemName: "heart.circle.fill", withConfiguration: config)
+//            sender.setImage(image, for: .normal)
+//            isHeartedSelected = false
+//        } else {
+//            let config = UIImage.SymbolConfiguration(paletteColors: [.red, .systemGray, .darkGray])
+//            let image = UIImage(systemName: "heart.circle.fill", withConfiguration: config)
+//            sender.setImage(image, for: .normal)
+//            isHeartedSelected = true
+//        }
+//    }
     
 }
