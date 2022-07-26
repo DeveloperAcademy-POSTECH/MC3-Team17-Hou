@@ -34,3 +34,14 @@ extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: opacity)
     }
 }
+
+class CustomColor {
+    static let mainRed = UIColor(hex: "B31B1B")
+    static let mainMidRed = UIColor(hex: "D15353")
+    static let mainGray = UIColor(hex: "767676")
+    static let buttonLightGray = UIColor(hex: "F6F6F6")
+    static let buttonLightRed = UIColor(hex: "FFC3C3")
+    static let textBlack = UIColor(hex: "000000")
+    static let textGray = UIColor(hex: "818181")
+    static let xMark = UIColor(hex: "798191")
+}
