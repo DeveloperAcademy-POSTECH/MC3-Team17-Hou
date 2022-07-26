@@ -67,5 +67,6 @@ class NoticeViewController: UIViewController {
     }
     
     @IBAction func cancelNoticeButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="KeywordList" representedClassName="KeywordList" syncable="YES" codeGenerationType="class">
+        <attribute name="keywordSubs" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="LikeList" representedClassName="LikeList" syncable="YES" codeGenerationType="class">
+        <attribute name="isLiked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="nameLike" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ReserveList" representedClassName="ReserveList" syncable="YES" codeGenerationType="class">
+        <attribute name="isReserved" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="reserveDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="LikeList" positionX="-54" positionY="-9" width="128" height="74"/>
+        <element name="ReserveList" positionX="-36" positionY="9" width="128" height="74"/>
+        <element name="KeywordList" positionX="-18" positionY="27" width="128" height="44"/>
+    </elements>
+</model>
