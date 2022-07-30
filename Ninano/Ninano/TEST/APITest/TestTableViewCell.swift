@@ -10,7 +10,7 @@ import UIKit
 class NewsTableViewCellViewModel {
     let title: String
     let imageURL: URL?
-    var imageData: Data? = nil
+    var imageData: Data?
 
     init(
         title: String,

@@ -132,14 +132,13 @@
                                 </state>
                                 <connections>
                                     <action selector="keywordNotificationButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VSv-mh-EWE"/>
-                                    <action selector="notificationSettingsButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hys-K6-mVx"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wdi-el-Pla">
-                                <rect key="frame" x="82.5" y="808" width="249.5" height="40"/>
+                                <rect key="frame" x="79" y="808" width="256.5" height="40"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키워드 알림이 등록되었습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJz-w0-JyG" customClass="PaddingLabel" customModule="Ninano" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  키워드 알림이 등록되었습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJz-w0-JyG">
+                                        <rect key="frame" x="0.0" y="0.0" width="164.5" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -150,7 +149,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3m-x4-4Qp">
-                                        <rect key="frame" x="165.5" y="0.0" width="84" height="40"/>
+                                        <rect key="frame" x="172.5" y="0.0" width="84" height="40"/>
                                         <color key="tintColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
@@ -194,7 +193,9 @@
                         <outlet property="eventCollectionView" destination="udG-aU-qED" id="nDN-dQ-ZHd"/>
                         <outlet property="eventFilterButton" destination="9aE-Rg-zDe" id="w1z-BS-og1"/>
                         <outlet property="keywordAddedNotification" destination="Wdi-el-Pla" id="jBW-Sa-OSz"/>
+                        <outlet property="keywordAlarmLabel" destination="mJz-w0-JyG" id="ohc-wi-Y5R"/>
                         <outlet property="keywordNotification" destination="ClT-jf-Z8m" id="0P2-rv-v0a"/>
+                        <outlet property="keywordSettingButton" destination="o3m-x4-4Qp" id="BSg-ev-XtD"/>
                         <outlet property="performanceCollectionView" destination="udG-aU-qED" id="aT0-Vv-n4Y"/>
                     </connections>
                 </viewController>
@@ -286,11 +287,6 @@
             <point key="canvasLocation" x="971.01449275362324" y="95.758928571428569"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="mJz-w0-JyG">
-            <size key="intrinsicContentSize" width="157.5" height="16"/>
-        </designable>
-    </designables>
     <resources>
         <image name="bell.circle.fill" catalog="system" width="128" height="121"/>
         <image name="heart.circle.fill" catalog="system" width="128" height="121"/>

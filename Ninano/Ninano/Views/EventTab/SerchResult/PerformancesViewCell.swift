@@ -15,17 +15,19 @@ final class PerformancesViewCell: UICollectionViewCell {
     @IBOutlet private weak var eventPlaceLabel: UILabel!
     
     func updateEventCell(event: Event) {
-        self.eventDateLabel.text = event.title
+        self.eventTitleLabel.text = event.title
         self.eventDateLabel.text = event.period
         self.eventPlaceLabel.text = event.place
         if let data = event.posterData {
-            print("posterData 있음")
-            //            22008595_p
             addImage(UIImage: UIImage(data: data) ?? UIImage())
-        } else {
-            print("posterData 없음")
         }
-        
+        configuration()
+    }
+    
+    private func configuration() {
+        eventTitleLabel.font = UIFont.preferredFont(forTextStyle: .caption2, weight: .bold)
+        eventDateLabel.font = UIFont.preferredFont(forTextStyle: .caption2, weight: .regular)
+        eventPlaceLabel.font = UIFont.preferredFont(forTextStyle: .caption2, weight: .regular)
     }
     
     private func addImage(UIImage: UIImage) {

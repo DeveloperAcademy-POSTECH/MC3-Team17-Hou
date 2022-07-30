@@ -27,7 +27,7 @@
                             <color key="tintColor" systemColor="labelColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="gray" title="지역설정" cornerStyle="capsule">
-                                <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <fontDescription key="titleFontDescription" style="UICTFontTextStyleFootnote"/>
                                 <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
                             </buttonConfiguration>
                             <connections>
@@ -38,14 +38,8 @@
                             <rect key="frame" x="110.5" y="0.0" width="102.5" height="30"/>
                             <color key="tintColor" systemColor="labelColor"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="gray" cornerStyle="capsule">
-                                <attributedString key="attributedTitle">
-                                    <fragment content="일정설정">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="AppleSDGothicNeo-Regular"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <buttonConfiguration key="configuration" style="gray" title="일정설정" cornerStyle="capsule">
+                                <fontDescription key="titleFontDescription" style="UICTFontTextStyleFootnote"/>
                                 <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
                             </buttonConfiguration>
                             <connections>
